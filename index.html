@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Man | 萬文康 — Full-Stack Developer (AI Integration)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --surface: #12121a;
+            --border: #1e1e2e;
+            --text: #e4e4ed;
+            --text-muted: #8888a0;
+            --accent: #6c5ce7;
+            --accent-light: #a29bfe;
+            --green: #00cec9;
+            --orange: #fdcb6e;
+            --radius: 12px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+        /* Header */
+        header {
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border);
+        }
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-light), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        header .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+        header .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .badge {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Nav */
+        nav {
+            display: flex;
+            gap: 24px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--accent-light); }
+
+        /* Section */
+        section { padding: 48px 0; }
+        section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        section h2 .lang-zh {
+            font-size: 1rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* About */
+        .about-text {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+        }
+        .about-text p { margin-bottom: 12px; }
+        .about-text strong { color: var(--text); }
+
+        /* Project Cards */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        .project-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        .project-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .project-card .lang-zh {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+        .project-card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        .project-card .tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .project-card .tech span {
+            background: rgba(108, 92, 231, 0.15);
+            color: var(--accent-light);
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+        }
+        .project-card .status {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 10px;
+            border-radius: 12px;
+            margin-top: 10px;
+        }
+        .status.live { background: rgba(0, 206, 201, 0.15); color: var(--green); }
+        .status.dev { background: rgba(253, 203, 110, 0.15); color: var(--orange); }
+
+        /* Skills */
+        .skill-cat {
+            margin-bottom: 20px;
+        }
+        .skill-cat h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--accent-light);
+            margin-bottom: 8px;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .skill-tags span {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 4px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+
+        /* Contact */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .contact-links a {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: border-color 0.2s;
+        }
+        .contact-links a:hover { border-color: var(--accent); }
+
+        footer {
+            padding: 32px 0;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .project-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Martin Man</h1>
+            <div class="subtitle">Full-Stack Developer (AI Integration) · 全端開發者（AI 整合）</div>
+            <div class="badge-row">
+                <span class="badge">📍 Hong Kong</span>
+                <span class="badge">💼 2+ yrs experience</span>
+                <span class="badge">🤖 AI-assisted development</span>
+            </div>
+        </header>
+
+        <nav>
+            <a href="#about">About 關於</a>
+            <a href="#projects">Projects 作品</a>
+            <a href="#skills">Skills 技能</a>
+            <a href="#contact">Contact 聯絡</a>
+        </nav>
+
+        <section id="about">
+            <h2>About Me <span class="lang-zh">關於我</span></h2>
+            <div class="about-text">
+                <p>I'm a self-taught full-stack developer with a passion for <strong>AI integration</strong> and <strong>digital transformation</strong>. Over the past 2 years at a Hong Kong NGO, I've built everything from AI meeting minutes to barcode scanning apps — all delivering real operational impact.</p>
+                <p>我是自學全端開發者，專注於 <strong>AI 整合</strong> 和 <strong>數碼轉型</strong>。過去兩年在香港非牟利機構工作，從 AI 會議記錄到條碼掃描應用，我開發了多個能帶來實際影響的系統。</p>
+                <p>I don't just write code — I identify bottlenecks and build AI-augmented solutions that replace them. My workflow is <strong>CursorAI-assisted</strong>, allowing me to ship faster and focus on architecture and problem-solving.</p>
+                <p>我不只是寫程式——我會找出流程瓶頸，並建立 AI 輔助的方案去解決它們。我使用 <strong>CursorAI</strong> 輔助開發，讓我能更快交付，專注於架構和解決問題。</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects <span class="lang-zh">作品</span></h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>AI Meeting Minutes</h3>
+                    <div class="lang-zh">AI 會議記錄系統</div>
+                    <p>Built with DifyAI — transcribes and summarizes meeting recordings. Supports long recordings up to 4 hours. Users upload audio, get structured minutes back.</p>
+                    <div class="tech">
+                        <span>DifyAI</span>
+                        <span>LLM</span>
+                        <span>Python</span>
+                    </div>
+                    <span class="status dev">🔧 Developing</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>Barcode Scanner App</h3>
+                    <div class="lang-zh">便利店條碼掃描系統</div>
+                    <p>Scan barcode → fetch product description → search for similar brand products. Full-stack mobile + API integration.</p>
+                    <div class="tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>API</span>
+                    </div>
+                    <span class="status dev">🔧 Developing</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>CEO Financial Dashboard</h3>
+                    <div class="lang-zh">CEO 財務儀表板</div>
+                    <p>Real-time dashboard monitoring revenue across departments. Extracts data from legacy systems. Helps CEO make strategic decisions.</p>
+                    <div class="tech">
+                        <span>Dashboard</span>
+                        <span>Data Viz</span>
+                        <span>Legacy Integration</span>
+                    </div>
+                    <span class="status dev">🔧 Developing</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>Poster Brand Review AI</h3>
+                    <div class="lang-zh">海報品牌審查 AI</div>
+                    <p>AI-assisted tool for reviewing poster and branding consistency. Automates brand compliance checks.</p>
+                    <div class="tech">
+                        <span>CursorAI</span>
+                        <span>Computer Vision</span>
+                        <span>LLM</span>
+                    </div>
+                    <span class="status dev">🔧 Developing</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>Digital Transformation CRUD Systems</h3>
+                    <div class="lang-zh">數碼轉型 CRUD 系統</div>
+                    <p>Built custom CRUD applications for multiple departments. Replaced paper/manual workflows with digital systems.</p>
+                    <div class="tech">
+                        <span>Full-Stack</span>
+                        <span>CursorAI</span>
+                        <span>Database</span>
+                    </div>
+                    <span class="status live">✅ Live</span>
+                </div>
+
+                <div class="project-card">
+                    <h3>Report Portal — Legacy Data Extraction</h3>
+                    <div class="lang-zh">報告平台 — 舊系統數據提取</div>
+                    <p>Extracted and transformed data from aging legacy systems. Vendor-supported integration layer. Fed into modern dashboards.</p>
+                    <div class="tech">
+                        <span>ETL</span>
+                        <span>Data Integration</span>
+                        <span>Reporting</span>
+                    </div>
+                    <span class="status live">✅ Live</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills <span class="lang-zh">技能</span></h2>
+            <div class="skill-cat">
+                <h3>AI & LLM</h3>
+                <div class="skill-tags">
+                    <span>CursorAI</span>
+                    <span>DifyAI</span>
+                    <span>OpenAI API</span>
+                    <span>LLM Integration</span>
+                    <span>RAG</span>
+                </div>
+            </div>
+            <div class="skill-cat">
+                <h3>Frontend</h3>
+                <div class="skill-tags">
+                    <span>React</span>
+                    <span>Vue</span>
+                    <span>HTML/CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+            <div class="skill-cat">
+                <h3>Backend & Data</h3>
+                <div class="skill-tags">
+                    <span>Node.js</span>
+                    <span>Python</span>
+                    <span>REST API</span>
+                    <span>Database</span>
+                    <span>ETL</span>
+                </div>
+            </div>
+            <div class="skill-cat">
+                <h3>Other</h3>
+                <div class="skill-tags">
+                    <span>Legacy System Integration</span>
+                    <span>Digital Transformation</span>
+                    <span>Helpdesk Support</span>
+                    <span>Git</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact <span class="lang-zh">聯絡</span></h2>
+            <div class="about-text" style="margin-bottom: 16px;">
+                <p>Interested in working together? Let's talk.</p>
+                <p>有興趣合作？歡迎聯絡。</p>
+            </div>
+            <div class="contact-links">
+                <a href="https://github.com/martinman2020" target="_blank">GitHub</a>
+                <a href="mailto:martinman2020@users.noreply.github.com">Email</a>
+                <a href="https://martinman2020.github.io/resume.pdf" target="_blank">📄 Resume (coming soon)</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Martin Man · Built with ❤️</p>
+        </footer>
+    </div>
+</body>
+</html>

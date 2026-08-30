@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -115,10 +115,7 @@
             display: inline-block;
         }
         section h2 .lang-zh {
-            font-size: 1rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            margin-left: 4px;
+            display:none;
         }
 
         /* About */
@@ -156,9 +153,7 @@
             margin-bottom: 4px;
         }
         .project-card .lang-zh {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 10px;
+            display: none;
         }
         .project-card p {
             font-size: 0.9rem;
@@ -244,7 +239,7 @@
     <div class="container">
         <header>
             <h1>Martin Man</h1>
-            <div class="subtitle">Full-Stack Developer (AI Integration) · 全端開發者（AI 整合）</div>
+            <div class="subtitle">Full-Stack Developer (AI Integration)</div>
             <div class="badge-row">
                 <span class="badge">📍 Sai Kung, Hong Kong</span>
                 <span class="badge">💼 3+ yrs experience</span>
@@ -253,28 +248,25 @@
         </header>
 
         <nav>
-            <a href="#about">About 關於</a>
-            <a href="#projects">Projects 作品</a>
-            <a href="#skills">Skills 技能</a>
-            <a href="#contact">Contact 聯絡</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
 
         <section id="about">
-            <h2>About Me <span class="lang-zh">關於我</span></h2>
+            <h2>About Me</h2>
             <div class="about-text">
                 <p>I'm a full-stack developer with over <strong>3 years</strong> of experience building <strong>AI-integrated</strong> business applications at a Hong Kong NGO — from meeting transcription and barcode product search to executive dashboards and automated brand review.</p>
-                <p>我是一名具逾 <strong>3 年</strong>經驗的全端開發者，在香港非牟利機構開發多個 <strong>AI 整合</strong>商業應用——由會議轉錄、條碼搜尋、行政儀表板，到自動化品牌審查。</p>
                 <p>I don't just write code — I identify bottlenecks and build AI-augmented solutions that replace them. My workflow is <strong>CursorAI-assisted</strong>, shipping with DifyAI and LLM APIs to turn manual, paper-based workflows into working software, fast.</p>
-                <p>我不只是寫程式——我會找出流程瓶頸，並建立 AI 輔助的方案去解決它們。我使用 <strong>CursorAI</strong> 輔助開發，配合 DifyAI 及 LLM API 快速交付，將紙本流程變成可用軟件。</p>
             </div>
         </section>
 
         <section id="projects">
-            <h2>Projects <span class="lang-zh">作品</span></h2>
+            <h2>Projects</h2>
             <div class="project-grid">
                 <div class="project-card">
                     <h3>AI Meeting Minutes</h3>
-                    <div class="lang-zh">AI 會議記錄系統</div>
                     <p>DifyAI pipeline that transcribes and summarises up to 4-hour recordings into structured minutes. Users upload audio, get structured minutes back.</p>
                     <div class="tech">
                         <span>DifyAI</span>
@@ -286,7 +278,6 @@
 
                 <div class="project-card">
                     <h3>Barcode Scanner App</h3>
-                    <div class="lang-zh">條碼掃描系統</div>
                     <p>Mobile barcode scanner that returns product descriptions and similar-brand matches, helping store staff quickly identify products.</p>
                     <div class="tech">
                         <span>React Native</span>
@@ -298,7 +289,6 @@
 
                 <div class="project-card">
                     <h3>CEO Financial Dashboard</h3>
-                    <div class="lang-zh">CEO 財務儀表板</div>
                     <p>Real-time dashboard consolidating legacy departmental data into a single revenue view, helping executive decision-making.</p>
                     <div class="tech">
                         <span>Dashboard</span>
@@ -310,7 +300,6 @@
 
                 <div class="project-card">
                     <h3>Poster Brand Review AI</h3>
-                    <div class="lang-zh">海報品牌審查 AI</div>
                     <p>CursorAI-assisted tool that automates brand-compliance checks on posters and marketing materials, reducing manual review.</p>
                     <div class="tech">
                         <span>CursorAI</span>
@@ -322,7 +311,6 @@
 
                 <div class="project-card">
                     <h3>Department CRUD Systems</h3>
-                    <div class="lang-zh">部門 CRUD 系統</div>
                     <p>Custom full-stack CRUD applications for multiple departments, replacing paper and manual workflows with digital systems.</p>
                     <div class="tech">
                         <span>Full-Stack</span>
@@ -334,7 +322,6 @@
 
                 <div class="project-card">
                     <h3>Report Portal — Legacy Data</h3>
-                    <div class="lang-zh">報告平台 — 舊系統數據</div>
                     <p>Extracted and transformed data from aging legacy systems via a vendor-supported integration layer, feeding modern dashboards.</p>
                     <div class="tech">
                         <span>ETL</span>
@@ -347,7 +334,7 @@
         </section>
 
         <section id="skills">
-            <h2>Skills <span class="lang-zh">技能</span></h2>
+            <h2>Skills</h2>
             <div class="skill-cat">
                 <h3>AI & LLM</h3>
                 <div class="skill-tags">
@@ -391,15 +378,14 @@
         </section>
 
         <section id="contact">
-            <h2>Contact <span class="lang-zh">聯絡</span></h2>
+            <h2>Contact</h2>
             <div class="about-text">
                 <p>Interested in working together? Let's talk.</p>
-                <p>有興趣合作？歡迎聯絡。</p>
             </div>
             <div class="contact-links">
                 <a href="https://github.com/martinman2020" target="_blank" rel="noopener">GitHub</a>
                 <a href="mailto:mantszkitmartin@gmail.com">Email</a>
-                <a href="resume.pdf" target="_blank">📄 Resume / 履歷</a>
+                <a href="resume.pdf" target="_blank">📄 Resume</a>
             </div>
         </section>
 

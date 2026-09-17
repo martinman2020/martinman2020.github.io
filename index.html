@@ -273,8 +273,8 @@
             <div class="subtitle">Full-Stack Developer (AI Integration)</div>
             <div class="badge-row">
                 <span class="badge">📍 Sai Kung, Hong Kong</span>
-                <span class="badge">💼 3+ yrs experience</span>
-                <span class="badge">🤖 AI-assisted development</span>
+                <span class="badge">💼 Full-Stack · Applied AI</span>
+                <span class="badge">🏢 Serving 50+ service units</span>
             </div>
         </header>
 
@@ -288,8 +288,8 @@
         <section id="about">
             <h2>About Me</h2>
             <div class="about-text">
-                <p>I'm a full-stack developer with over <strong>3 years</strong> of experience building <strong>AI-integrated</strong> business applications at a Hong Kong NGO — from meeting transcription to executive dashboards and automated brand review.</p>
-                <p>I don't just write code — I identify bottlenecks and build AI-augmented solutions that replace them. My workflow is <strong>CursorAI-assisted</strong>, shipping with DifyAI and LLM APIs to turn manual, paper-based workflows into working software, fast.</p>
+                <p>I'm a full-stack developer building <strong>AI-integrated</strong> business applications at a Hong Kong NGO serving 50+ units — from an enterprise carbon platform and an SSO AI portal to RAG chatbots and automated brand review.</p>
+                <p>I take each system from <strong>technical design through build, testing and deployment</strong>. My workflow is <strong>AI-assisted</strong>, shipping with DifyAI, LangGraph and LLM APIs to turn manual, paper-based workflows into working software, fast.</p>
             </div>
         </section>
 
@@ -309,7 +309,7 @@
                         <summary>Read more</summary>
                         <div class="details-inner">
                             <h4>My role / What I built</h4>
-                            <p>Owner of the full build — Next.js frontend, Java/Spring backend, MySQL. I designed a formula engine so CO₂e emission factors can be swapped per fiscal year without code changes, and added audit-ready exports.</p>
+                            <p>Owner of the full build — Next.js frontend, Java/Spring backend, MySQL, adopted by 56 service units. I designed a formula engine so CO₂e emission factors can be swapped per fiscal year without code changes, and added audit-ready exports.</p>
                             <h4>Outcome</h4>
                             <p>Service units now enter energy &amp; waste in one place; numbers are standardised to CO₂e; compliance reporting no longer relies on spreadsheets and manual conversion.</p>
                             <h4>Why it stands out</h4>
@@ -341,23 +341,45 @@
                 </div>
 
                 <div class="project-card">
-                    <h3>AI Meeting Minutes</h3>
-                    <p>DifyAI pipeline that transcribes and summarises up to 4-hour recordings into structured minutes. Users upload audio, get structured minutes back.</p>
+                    <h3>AI Portal + Meeting Minutes AI</h3>
+                    <p>SSO AI staff portal (18 service units) with user management and usage credits, shipping MinutesAI: upload audio → Azure Speech-to-Text → Dify workflow → structured Word/PDF minutes.</p>
                     <div class="tech">
+                        <span>Next.js</span>
+                        <span>Azure Speech-to-Text</span>
                         <span>DifyAI</span>
-                        <span>LLM</span>
-                        <span>Python</span>
                     </div>
-                    <span class="status dev">🔧 In development</span>
+                    <span class="status live">✅ Live</span>
                     <details>
                         <summary>Read more</summary>
                         <div class="details-inner">
                             <h4>My role / What I built</h4>
-                            <p>Designed a DifyAI pipeline that transcribes and summarises up to 4-hour recordings into structured minutes — handling chunking, token/cost control, and prompt design for structured output.</p>
+                            <p>Built the AI portal handling SSO, user management and usage credits, and designed the MinutesAI pipeline — handling long-audio chunking, token/cost control, and prompt design for structured output.</p>
                             <h4>Outcome</h4>
                             <p>A recording that took staff significant time to read is summarised automatically, so records are done quickly and consistently.</p>
                             <h4>Why it stands out</h4>
-                            <p>My strongest AI story. Proves I can tame long-audio + LLM cost + accuracy — a rare, senior-relevant skill.</p>
+                            <p>Proves I can tame long-audio + LLM cost + accuracy inside a production portal used across 18 units.</p>
+                        </div>
+                    </details>
+                </div>
+
+                <div class="project-card">
+                    <h3>Helpdesk RAG Chatbot</h3>
+                    <p>Staff helpdesk assistant on Dify Knowledge Base + Azure OpenAI: hybrid retrieval (vector + keyword with reranking) over internal SOP/IT docs, grounding answers with source citations.</p>
+                    <div class="tech">
+                        <span>DifyAI</span>
+                        <span>Azure OpenAI</span>
+                        <span>RAG</span>
+                    </div>
+                    <span class="status live">✅ Live</span>
+                    <details>
+                        <summary>Read more</summary>
+                        <div class="details-inner">
+                            <h4>My role / What I built</h4>
+                            <p>Designed the retrieval setup — hybrid vector + keyword search with reranking — and whole-ticket chunking so each retrieved chunk keeps its question-and-answer pairing.</p>
+                            <h4>Outcome</h4>
+                            <p>Repeated Tier-1 enquiries get grounded answers with citations to the source docs instead of manual lookups.</p>
+                            <h4>Why it stands out</h4>
+                            <p>Hands-on RAG engineering — retrieval tuning, citations and hallucination guardrails — the pattern most enterprises are hiring for.</p>
                         </div>
                     </details>
                 </div>
@@ -386,22 +408,22 @@
 
                 <div class="project-card">
                     <h3>Poster Brand Review AI</h3>
-                    <p>CursorAI-assisted tool that automates brand-compliance checks on posters and marketing materials, reducing manual review.</p>
+                    <p>AI agent (LangGraph.js + Azure OpenAI Vision) that automates brand-compliance checks on posters — colour, font, logo and layout — against the corporate Brand Book.</p>
                     <div class="tech">
-                        <span>CursorAI</span>
-                        <span>Computer Vision</span>
-                        <span>LLM</span>
+                        <span>LangGraph.js</span>
+                        <span>Azure OpenAI Vision</span>
+                        <span>Next.js</span>
                     </div>
-                    <span class="status dev">🔧 In development</span>
+                    <span class="status live">✅ Live</span>
                     <details>
                         <summary>Read more</summary>
                         <div class="details-inner">
                             <h4>My role / What I built</h4>
-                            <p>CursorAI-assisted tool combining computer-vision with an LLM to automate brand-compliance checks on posters and marketing materials.</p>
+                            <p>Designed the LangGraph agent graph — nodes per check (colour, font, logo, layout) with conditional edges aggregating violations; built with AI-assisted development and debugged via LangSmith tracing.</p>
                             <h4>Outcome</h4>
                             <p>Materials get faster, more consistent compliance checks — no more checking every design by hand.</p>
                             <h4>Why it stands out</h4>
-                            <p>Shows my AI-assisted workflow (CursorAI) plus multimodal (image + text) skill — a strong differentiator.</p>
+                            <p>Shows agent workflow design plus multimodal (image + text) skill — a strong differentiator.</p>
                         </div>
                     </details>
                 </div>
@@ -423,7 +445,7 @@
                             <h4>Outcome</h4>
                             <p>Manual, error-prone processes became structured digital workflows, delivered fast with CursorAI.</p>
                             <h4>Why it stands out</h4>
-                            <p>Breadth — I adapt to different business domains quickly and work directly with non-technical users to define requirements.</p>
+                            <p>Breadth — I adapt to different business domains quickly and ship systems non-technical teams actually adopt.</p>
                         </div>
                     </details>
                 </div>
@@ -455,13 +477,14 @@
         <section id="skills">
             <h2>Skills</h2>
             <div class="skill-cat">
-                <h3>AI & LLM</h3>
+                <h3>AI &amp; LLM</h3>
                 <div class="skill-tags">
-                    <span>CursorAI</span>
                     <span>DifyAI</span>
-                    <span>OpenAI / LLM APIs</span>
-                    <span>Azure AI Foundry</span>
-                    <span>LLM Integration</span>
+                    <span>LangGraph</span>
+                    <span>Azure OpenAI</span>
+                    <span>RAG Pipelines</span>
+                    <span>LLM APIs</span>
+                    <span>AI-assisted Development</span>
                 </div>
             </div>
             <div class="skill-cat">
@@ -489,7 +512,7 @@
             <div class="skill-cat">
                 <h3>Working Style</h3>
                 <div class="skill-tags">
-                    <span>Requirements Gathering</span>
+                    <span>Technical Design</span>
                     <span>UAT</span>
                     <span>Cross-department Delivery</span>
                     <span>Troubleshooting</span>

@@ -1,23 +1,103 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Martin Man — CV</title><style>
-@page { size: A4; margin: 12mm 15mm; }
-* { box-sizing: border-box; }
-body { margin: 0; color: #333; background: white;
-       font-family: Calibri, Carlito, 'Liberation Sans', sans-serif; font-size: 11pt; line-height: 13pt; }
-p { margin: 0 0 2pt; }
-strong { color: #1a1a1a; }
-.name { color: #2b579a; font-size: 18pt; line-height: 21pt; margin-bottom: 1pt; }
-.name strong { color: #2b579a; }
-.title { font-size: 12pt; line-height: 15pt; margin-bottom: 2pt; }
-.contact { font-size: 9.5pt; line-height: 12pt; color: #595959; margin-bottom: 4pt; }
-table { border-collapse: collapse; width: 100%; table-layout: fixed; }
-.date-col { width: 25mm; }
-td { vertical-align: top; padding: 1pt 0; }
-td:first-child:not([colspan]) { text-align: right; padding-right: 4pt; font-size: 9.5pt; color: #595959; }
-.meta { font-size: 10pt; color: #595959; }
-td:first-child .meta { font-size: 9.5pt; }
-.section { padding: 4pt 0 2pt; }
-.section p { border-bottom: 0.75pt solid #2b579a; padding-bottom: 2pt; margin: 0; }
-.section strong { color: #2b579a; }
-.bullet { padding-left: 11.34pt; text-indent: -8.50pt; margin-bottom: 1pt; }
-tr { break-inside: avoid; }
-</style></head><body><p class="name"><strong>Martin Man</strong></p><p class="title"><strong>Full-Stack Developer (AI Integration)</strong></p><p class="contact">Sai Kung, Hong Kong   |   +852 5621 7878   |   martinman.jobhunt@gmail.com   |   martinman2020.github.io</p><table><colgroup><col class="date-col"><col></colgroup><tr><td colspan="2" class="section"><p class=""><strong>PROFESSIONAL PROFILE</strong></p></td></tr><tr><td><p class=""></p></td><td><p class="">Full-Stack Developer building enterprise applications and backend systems, with hands-on technical design, implementation, testing and deployment. Delivers full-stack products within a two-person development team at a multi-unit NGO, with applied AI integration as an additional capability.</p></td></tr><tr><td colspan="2" class="section"><p class=""><strong>EXPERIENCE</strong></p></td></tr><tr><td><p class="meta"><em>Sep 2024<br>– Present</em></p></td><td><p class=""><strong>Full-Stack Developer (AI Integration)</strong></p><p class="meta"><em>Haven of Hope Christian Service, Hong Kong</em></p><p class="bullet"><strong>• </strong><strong>CarbonHub: </strong>Built an end-to-end carbon platform (Next.js, Spring Boot, MySQL), adopted by 56 service units: schema/Flyway migrations, REST API, fiscal-year emission formulas, unit access controls, async ZIP audit exports and Windows/IIS deployment.</p><p class="bullet"><strong>• </strong><strong>ARS: </strong>Built attendance and roster features (Laravel, MySQL, SQL Server): punch-data imports, shift rules and department access controls with tests; GitLab CI/CD build/deploy to Windows IIS, with secrets outside Git.</p><p class="bullet"><strong>• </strong><strong>AI Portal + MinutesAI: </strong>Developed a Next.js staff portal for 18 units with SSO, user management and usage credits; audio-to-minutes workflow using Azure Speech-to-Text and Dify, with Word/PDF export.</p><p class="bullet"><strong>• </strong><strong>Brand Review: </strong>Development-stage agent (LangGraph.js, Next.js, Azure OpenAI Vision) checking uploaded posters against brand guidelines for colour, font, logo and layout.</p><p class="bullet"><strong>• </strong><strong>Helpdesk RAG: </strong>Built a staff assistant with Dify Knowledge Base and Azure OpenAI: internal-document ingestion, hybrid retrieval, reranking and answers with source citations.</p></td></tr><tr><td><p class="meta"><em>Aug 2023<br>– Jun 2024</em></p></td><td><p class=""><strong>Junior Programmer</strong></p><p class="meta"><em>CL Technical Services Limited · Client: Innovation and Technology Commission</em></p><p class="bullet"><strong>• </strong>Supported the Project Manager on the Research Clusters Division’s InnoHK IT system: function design, data migration, SIT/UAT and maintenance; contributed to requirements work.</p></td></tr><tr><td colspan="2" class="section"><p class=""><strong>EDUCATION</strong></p></td></tr><tr><td><p class="meta"><em>2019–2023</em></p></td><td><p class=""><strong>The Hong Kong University of Science and Technology (HKUST)</strong></p><p class="">BEng Computer Engineering · Second Class Honours Division I</p></td></tr><tr><td><p class="meta"><em>2017–2019</em></p></td><td><p class=""><strong>Community College of City University</strong></p><p class="">Associate of Science, Network &amp; System Administration · Distinction</p></td></tr><tr><td><p class="meta"><em>2015</em></p></td><td><p class=""><strong>HKSYCIA Wong Tai Shan Memorial College</strong></p><p class="">Hong Kong Diploma of Secondary Education (HKDSE)</p></td></tr><tr><td colspan="2" class="section"><p class=""><strong>SKILLS &amp; LANGUAGES</strong></p></td></tr><tr><td><p class=""></p></td><td><p class=""><strong>Web &amp; backend: </strong>Next.js / React, Node.js, Java (Spring Boot), Laravel / PHP, Python</p><p class=""><strong>Applied AI: </strong>Azure OpenAI &amp; Speech, Dify, LangGraph, LLM APIs, RAG pipelines</p><p class=""><strong>Data &amp; ops: </strong>MySQL, SQL Server, PostgreSQL, GitLab, Git, Docker, Linux, Windows Server / IIS</p><p class=""><strong>Languages: </strong>Cantonese (native) · English · Putonghua (conversational)</p></td></tr></table></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Martin Man — Full-Stack Developer (AI Integration)</title>
+    <style>
+        @page { size: A4; margin: 1.4cm 1.6cm; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Calibri, 'Segoe UI', Arial, sans-serif;
+            color: #333;
+            font-size: 11pt;
+            line-height: 1.4;
+        }
+        .header { border-bottom: 2.5pt solid #2b579a; padding-bottom: 8px; margin-bottom: 14px; }
+        .header h1 { color: #2b579a; font-size: 17pt; letter-spacing: 0.5px; }
+        .header .title { color: #1f2a37; font-size: 12pt; font-weight: 700; margin-top: 3px; }
+        .header .contact { color: #666; font-size: 9.5pt; margin-top: 4px; }
+        section { margin-bottom: 13px; }
+        h2 {
+            color: #2b579a; font-size: 11pt; text-transform: uppercase;
+            border-bottom: 1pt solid #2b579a; padding-bottom: 2px; margin-bottom: 7px;
+        }
+        .item { margin-bottom: 9px; }
+        .item .head { display: flex; justify-content: space-between; align-items: baseline; }
+        .item .role { font-weight: 700; color: #1f2a37; font-size: 11pt; }
+        .item .date { color: #2b579a; font-weight: 700; font-size: 10pt; white-space: nowrap; }
+        .item .org { color: #666; font-style: italic; font-size: 10pt; margin: 1px 0 4px; }
+        /* Align the org/company line with the bullet text (which starts at 16px) */
+        .item .head { margin-left: 16px; margin-bottom: 1px; }
+        .item .org { margin-left: 16px; }
+        ul { padding-left: 16px; margin-top: 2px; }
+        li { margin-bottom: 2.5px; }
+        li b { color: #1f2a37; }
+        .edu p { margin-bottom: 1px; }
+        .skills p { margin-bottom: 3px; }
+        .skills b { color: #1f2a37; }
+        .profile { margin-bottom: 13px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>MAN TSZ KIT MARTIN</h1>
+        <div class="title">Full-Stack Developer (AI Integration)</div>
+        <div class="contact">Sai Kung, Hong Kong &nbsp;·&nbsp; +852 5621 7878 &nbsp;·&nbsp; martinman.jobhunt@gmail.com &nbsp;·&nbsp; martinman2020.github.io</div>
+    </div>
+
+    <div class="profile">
+        <h2>Professional Profile</h2>
+        <p>Full-Stack Developer delivering products from technical design through build, testing and deployment within a lean IT team supporting 50+ service units. I have delivered CarbonHub (Next.js + Java), ARS (Laravel + GitLab CI/CD to IIS), an SSO AI portal and applied-AI tools. Holds a HKUST BEng (Computer Engineering, Second Class Honours Division I).</p>
+    </div>
+
+    <section>
+        <h2>Experience</h2>
+        <div class="item">
+            <div class="head"><span class="role">Full-Stack Developer (AI Integration)</span><span class="date">Sep 2024 – Present</span></div>
+            <div class="org">Haven of Hope Christian Service, Hong Kong</div>
+            <ul>
+                <li><b>CarbonHub —</b> Carbon footprint platform (Next.js + Java + MySQL), built end-to-end: schema &amp; Flyway, Spring REST API, per-year emission formulas, unit ACL, async ZIP audit exports, Windows/IIS/PM2 deploy.</li>
+                <li><b>ARS —</b> Attendance &amp; roster system (Laravel + MySQL + SQL Server): Excel punch import, shift/roster rules, department ACL with tests, GitLab CI/CD build to Windows IIS (secrets out of git).</li>
+                <li><b>AI Meeting Minutes —</b> Developed a DifyAI pipeline transcribing &amp; summarising long recordings into structured minutes.</li>
+                <li><b>CEO Dashboard —</b> Consolidated legacy departmental data into a real-time revenue view.</li>
+                <li><b>Poster Brand Review AI —</b> Development-stage LangGraph.js + Azure OpenAI Vision agent for brand-compliance checks.</li>
+                <li><b>Helpdesk RAG —</b> Dify Knowledge Base + Azure OpenAI with hybrid retrieval, reranking and source citations.</li>
+                <li><b>Department CRUD Systems —</b> Full-stack CRUD systems digitising paper workflows across departments.</li>
+                <li><b>Report Portal —</b> Extracted &amp; migrated legacy vendor data into modern reporting via Report Portal.</li>
+            </ul>
+        </div>
+        <div class="item">
+            <div class="head"><span class="role">Junior Programmer</span><span class="date">Aug 2023 – Jun 2024</span></div>
+            <div class="org">CL Technical Services Limited &nbsp;·&nbsp; Client: Innovation and Technology Commission</div>
+            <ul>
+                <li>Supported the Project Manager on an InnoHK IT system, covering requirements, function design, data migration, SIT/UAT and programme maintenance for the Research Clusters Division.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="item edu">
+            <span class="head"><span class="role">The Hong Kong University of Science and Technology (HKUST)</span></span>
+            <p>BEng Computer Engineering &nbsp;·&nbsp; Second Class Honours Division I</p>
+        </div>
+        <div class="item edu">
+            <span class="role">Community College of City University</span>
+            <p>Associate of Science, Network &amp; System Administration &nbsp;·&nbsp; Distinction</p>
+        </div>
+        <div class="item edu">
+            <span class="role">HKSYCIA Wong Tai Shan Memorial College</span>
+            <p>Hong Kong Diploma of Secondary Education (HKDSE)</p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2>Skills &amp; Languages</h2>
+        <p><b>Web &amp; backend&nbsp;&nbsp;</b>Next.js / React, Node.js, Java (Spring Boot), Laravel / PHP, Python &nbsp;·&nbsp; MySQL, SQL Server, PostgreSQL</p>
+        <p><b>Applied AI&nbsp;&nbsp;</b>Azure OpenAI &amp; Speech, DifyAI, LangGraph, LLM APIs, RAG pipelines</p>
+        <p><b>Data &amp; ops&nbsp;&nbsp;</b>GitLab CI/CD, Git, Docker, Linux, Windows Server / IIS</p>
+        <p><b>Languages&nbsp;&nbsp;</b>Cantonese (native) &nbsp;·&nbsp; English &nbsp;·&nbsp; Putonghua (conversational)</p>
+        <p><b>Working style&nbsp;&nbsp;</b>Technical alignment with BA &nbsp;·&nbsp; UAT &nbsp;·&nbsp; troubleshooting &nbsp;·&nbsp; cross-department delivery</p>
+    </section>
+</body>
+</html>
